@@ -1,0 +1,26 @@
+.Card-body {
+  /* width: 25rem; */
+  margin: 4%;
+}
+
+.image {
+  width: 60%;
+  height: 50%;
+  margin: 3% auto;
+  border-radius: 5%;
+}
+
+.title-card {
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+}
+
+.description-card {
+  font-size: medium;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
