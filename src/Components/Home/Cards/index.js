@@ -3,9 +3,24 @@ import Card from "react-bootstrap/Card";
 import "./index.css";
 import banner from "./banner.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faHeartCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 const Cards = ({ cardTittle, cardText }) => {
+  const [liked, setliked] = useState(false);
+
+  function iconChecker() {
+    if (liked) {
+      return faHeartCircleCheck;
+    } else {
+      return faHeart;
+    }
+  }
+
+  function like() {
+    setliked(!liked);
+  }
+
   return (
     <Card className="Card-body">
       <Card.Img className="image" variant="top" src={banner} />
@@ -14,8 +29,8 @@ const Cards = ({ cardTittle, cardText }) => {
         <Card.Text className="description-card">{cardText}</Card.Text>
         <div className="button-group">
           <Button variant="primary">Ler</Button>
-          <Button variant="outline-primary">
-            <FontAwesomeIcon icon={faHeart} />
+          <Button variant="outline-primary" onClick={() => like()}>
+            <FontAwesomeIcon icon={iconChecker()} />
           </Button>
         </div>
       </Card.Body>

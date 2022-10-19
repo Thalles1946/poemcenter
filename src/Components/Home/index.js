@@ -51,6 +51,12 @@ const Home = () => {
       cardText:
         " Oitavo poema: Aliqua dolore commodo ut cupidatat. Mollit ea sit mollit non ut ipsum. Anim irure proident aliqua voluptate ullamco.",
     },
+    {
+      id: 8,
+      cardTittle: "teste 9",
+      cardText:
+        " Nono poema: Aliqua dolore commodo ut cupidatat. Mollit ea sit mollit non ut ipsum. Anim irure proident aliqua voluptate ullamco.",
+    },
   ];
 
   return (
