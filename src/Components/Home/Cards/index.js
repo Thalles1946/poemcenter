@@ -14,7 +14,7 @@ const Cards = ({ cardTittle, cardText }) => {
         <Card.Text className="description-card">{cardText}</Card.Text>
         <div className="button-group">
           <Button variant="primary">Ler</Button>
-          <Button variant="outlined">
+          <Button variant="outline-primary">
             <FontAwesomeIcon icon={faHeart} />
           </Button>
         </div>
