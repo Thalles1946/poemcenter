@@ -12,6 +12,7 @@ function App() {
         <Route path="/" element={<Navigate to={"/home"} />} />
         <Route path="/home" element={<Home />} />
         <Route path="/maiscurtidos" element={<MostRated />} />
+        <Route path="/poem" element={<Poem />} />
       </Routes>
     </div>
   );
