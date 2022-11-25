@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faHeartCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-const Cards = ({ cardTittle, cardText, id }) => {
+const Cards = ({ cardTittle, cardText, id, idPoemLink }) => {
   const [liked, setliked] = useState(false);
 
   function iconChecker() {
@@ -23,7 +23,7 @@ const Cards = ({ cardTittle, cardText, id }) => {
   }
 
   function read() {
-    window.location.href = `/poem/${id}`;
+    window.location.href = `/poem/${idPoemLink}`;
   }
 
   return (
