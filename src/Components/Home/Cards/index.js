@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faHeartCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-const Cards = ({ cardTittle, cardText }) => {
+const Cards = ({ cardTittle, cardText, id }) => {
   const [liked, setliked] = useState(false);
 
   function iconChecker() {
@@ -18,7 +18,12 @@ const Cards = ({ cardTittle, cardText }) => {
   }
 
   function like() {
+    console.log(id, "poemId");
     setliked(!liked);
+  }
+
+  function read() {
+    window.location.href = `/poem/${id}`;
   }
 
   return (
@@ -28,7 +33,9 @@ const Cards = ({ cardTittle, cardText }) => {
         <Card.Title className="title-card">{cardTittle}</Card.Title>
         <Card.Text className="description-card">{cardText}</Card.Text>
         <div className="button-group">
-          <Button variant="primary">Ler</Button>
+          <Button onClick={() => read()} variant="primary">
+            Ler
+          </Button>
           <Button variant="outline-primary" onClick={() => like()}>
             <FontAwesomeIcon icon={iconChecker()} />
           </Button>

@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "./Components/Home";
 import MostRated from "./Components/MostRated";
+import PoemPage from "./Components/PoemPage";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Route path="/" element={<Navigate to={"/home"} />} />
         <Route path="/home" element={<Home />} />
         <Route path="/maiscurtidos" element={<MostRated />} />
-        <Route path="/poem" element={<Poem />} />
+        <Route path="/poem/:id" element={<PoemPage />} />
       </Routes>
     </div>
   );
