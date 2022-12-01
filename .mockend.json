@@ -1,58 +1,28 @@
 {
-  "poemPreview": [
-    {
-      "id": 0,
-      "cardTittle": "teste 1",
-      "cardText": " Primeiro poema: Aliqua dolore commodo ut cupidatat. Mollit ea sit mollit non ut ipsum. Anim irure proident aliqua voluptate ullamco.",
-      "idLink": "p03m1"
+  "User": {
+    "name": {
+      "string": {}
     },
-    {
-      "id": 1,
-      "cardTittle": "teste 2",
-      "cardText": " Segundo poema: Aliqua dolore commodo ut cupidatat. Mollit ea sit mollit non ut ipsum. Anim irure proident aliqua voluptate ullamco.",
-      "idLink": "safhasu"
+    "avatarUrl": {
+      "regexp": "https://i\\.pravatar\\.cc/150\\?u=[0-9]{5}"
     },
-    {
-      "id": 2,
-      "cardTittle": "teste 3",
-      "cardText": " Terceiro poema: Aliqua dolore commodo ut cupidatat. Mollit ea sit mollit non ut ipsum. Anim irure proident aliqua voluptate ullamco.",
-      "idLink": "asifhasuo"
+    "statusMessage": {
+      "string": ["working from home", "watching Netflix"]
     },
-    {
-      "id": 3,
-      "cardTittle": "teste 4",
-      "cardText": " Quarto poema: Aliqua dolore commodo ut cupidatat. Mollit ea sit mollit non ut ipsum. Anim irure proident aliqua voluptate ullamco.",
-      "idLink": "ashsa9fh"
+    "email": {
+      "regexp": "#[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
     },
-    {
-      "id": 4,
-      "cardTittle": "teste 5",
-      "cardText": " Quinto poema: Aliqua dolore commodo ut cupidatat. Mollit ea sit mollit non ut ipsum. Anim irure proident aliqua voluptate ullamco.",
-      "idLink": "hf892qh8f9hq"
+    "color": {
+      "regexp": "#[0-9A-F]{6}"
     },
-    {
-      "id": 5,
-      "cardTittle": "teste 6",
-      "cardText": " Sexto poema: Aliqua dolore commodo ut cupidatat. Mollit ea sit mollit non ut ipsum. Anim irure proident aliqua voluptate ullamco.",
-      "idLink": "iqjiofjqoiwsf"
+    "age": {
+      "int": {
+        "min": 21,
+        "max": 100
+      }
     },
-    {
-      "id": 6,
-      "cardTittle": "teste 7",
-      "cardText": " Setimo poema: Aliqua dolore commodo ut cupidatat. Mollit ea sit mollit non ut ipsum. Anim irure proident aliqua voluptate ullamco.",
-      "idLink": "hofiashof"
-    },
-    {
-      "id": 7,
-      "cardTittle": "teste 8",
-      "cardText": " Oitavo poema: Aliqua dolore commodo ut cupidatat. Mollit ea sit mollit non ut ipsum. Anim irure proident aliqua voluptate ullamco.",
-      "idLink": "12h3iohnfasf"
-    },
-    {
-      "id": 8,
-      "cardTittle": "teste 9",
-      "cardText": " Nono poema: Aliqua dolore commodo ut cupidatat. Mollit ea sit mollit non ut ipsum. Anim irure proident aliqua voluptate ullamco.",
-      "idLink": "124huhifsfasf09ausf0"
+    "isPublic": {
+      "boolean": {}
     }
-  ]
+  }
 }
