@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./Components/Header";
 import { Route, Routes, Navigate } from "react-router-dom";
-import Home from "./Components/Home";
-import MostRated from "./Components/MostRated";
-import PoemPage from "./Components/PoemPage";
+import Home from "./Pages/Home";
+import MostRated from "./Pages/MostRated";
+import PoemPage from "./Pages/PoemPage";
 import { fetchPreviewPoems } from "./Services/get";
 import { useEffect, useState } from "react";
 

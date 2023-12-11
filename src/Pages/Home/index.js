@@ -1,4 +1,4 @@
-import Cards from "./Cards";
+import Cards from "../../Components/Cards";
 import "./index.css";
 import { fetchPreviewPoems } from "../../Services/get";
 import { useEffect, useState } from "react";

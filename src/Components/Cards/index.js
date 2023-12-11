@@ -5,7 +5,7 @@ import banner from "./banner.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faHeartCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import { fetchLike } from "../../../Services/set";
+import { fetchLike } from "../../Services/set";
 
 const Cards = ({ cardTittle, cardText, idPoemLink, likedPoem, refetch }) => {
   const liked = likedPoem;
