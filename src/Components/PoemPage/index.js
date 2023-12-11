@@ -3,23 +3,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import "./index.css";
-import { fetchPreviewPoems } from "../../Services/get";
+import { fetchPoem } from "../../Services/get";
 
-const PoemPage = ({ data, refetch }) => {
+const PoemPage = () => {
+  const [poem, setPoem] = useState({});
+
   const poemId = getId();
-  const dataPoem = getPoem(poemId);
-  const poem = dataPoem;
 
-  function getPoem(id) {
-    let poem = data.find((poem) => poem.idLink === id);
-    return poem;
-  }
+  useEffect(() => {
+    fetchPoem({ setPoem, poemId });
+  }, []);
 
   function getId() {
     const link = window.location.href;
-    console.log(link, "Url");
     const splitLink = link.split("/");
-    console.log(splitLink, "array splited");
     return splitLink[4];
   }
   return (
