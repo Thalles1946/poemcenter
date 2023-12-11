@@ -7,8 +7,8 @@ import { faHeart, faHeartCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { fetchLike } from "../../../Services/set";
 
-const Cards = ({ cardTittle, cardText, id, idPoemLink,likedPoem }) => {
-  const [liked, setliked] = useState(likedPoem);
+const Cards = ({ cardTittle, cardText, id, idPoemLink,likedPoem,refetch }) => {
+  const liked = likedPoem
 
   function iconChecker() {
     if (liked) {
@@ -20,6 +20,8 @@ const Cards = ({ cardTittle, cardText, id, idPoemLink,likedPoem }) => {
 
   function like() {
     fetchLike(idPoemLink)
+    refetch()
+
   }
 
   function read() {

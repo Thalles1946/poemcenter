@@ -19,6 +19,9 @@ const Home = () => {
           key={row.id}
           id={row.id}
           idPoemLink={row.idLink}
+          refetch={
+()=> fetchPreviewPoems(setData)
+          }
           cardText={row.cardText}
           likedPoem={row.like}
         />
