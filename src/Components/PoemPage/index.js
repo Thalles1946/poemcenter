@@ -19,16 +19,17 @@ const PoemPage = () => {
     const splitLink = link.split("/");
     return splitLink[4];
   }
+
   return (
     <div className="divParent">
       <div className="poemPageContainer">
         {poem && (
           <>
             <div className="pageTitle">
-              <h2>{poem.cardTittle}</h2>
+              <h2>{poem.title}</h2>
             </div>
             <div className="pagePoem">
-              <p className="poemText">{poem.cardText}</p>
+              <p className="poemText">{poem.poem}</p>
             </div>
           </>
         )}
