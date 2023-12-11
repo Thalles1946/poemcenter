@@ -5,9 +5,10 @@ import banner from "./banner.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faHeartCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { fetchLike } from "../../../Services/set";
 
-const Cards = ({ cardTittle, cardText, id, idPoemLink }) => {
-  const [liked, setliked] = useState(false);
+const Cards = ({ cardTittle, cardText, id, idPoemLink,likedPoem }) => {
+  const [liked, setliked] = useState(likedPoem);
 
   function iconChecker() {
     if (liked) {
@@ -18,8 +19,7 @@ const Cards = ({ cardTittle, cardText, id, idPoemLink }) => {
   }
 
   function like() {
-    console.log(id, "poemId");
-    setliked(!liked);
+    fetchLike(idPoemLink)
   }
 
   function read() {

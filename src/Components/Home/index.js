@@ -7,10 +7,6 @@ const Home = () => {
 
   const [data,setData] = useState([])
 
-
-
- 
-  
   useEffect(() => {
     fetchPreviewPoems(setData)
   },[])
@@ -24,6 +20,7 @@ const Home = () => {
           id={row.id}
           idPoemLink={row.idLink}
           cardText={row.cardText}
+          likedPoem={row.like}
         />
       )):<></>}
     </div>
