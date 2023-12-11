@@ -1,14 +1,23 @@
 import Cards from "./Cards";
 import "./index.css";
-import data from "./../../db.json";
+import { fetchPreviewPoems } from "../../Services/get";
+import { useEffect, useState } from "react";
 
 const Home = () => {
-  console.log(data, "json");
-  const poemsPreview = data.poemPreview;
+
+  const [data,setData] = useState([])
+
+
+
+ 
+  
+  useEffect(() => {
+    fetchPreviewPoems(setData)
+  },[])
 
   return (
     <div className="home-root">
-      {poemsPreview.map((row) => (
+      {data !== undefined ? data.map((row) => (
         <Cards
           cardTittle={row.cardTittle}
           key={row.id}
@@ -16,7 +25,7 @@ const Home = () => {
           idPoemLink={row.idLink}
           cardText={row.cardText}
         />
-      ))}
+      )):<></>}
     </div>
   );
 };

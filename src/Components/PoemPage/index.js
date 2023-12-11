@@ -3,12 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import "./index.css";
-import data from "./../../db.json";
+import { fetchPreviewPoems } from "../../Services/get";
 
 const PoemPage = () => {
   const [liked, setliked] = useState(false);
   const poemId = getId();
-  const poems = data.poemPreview;
+  const poems = fetchPreviewPoems();
   const poem = getPoem(poemId)[0];
 
   console.log(poem, "poema");
