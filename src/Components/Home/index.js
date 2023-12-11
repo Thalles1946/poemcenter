@@ -3,29 +3,24 @@ import "./index.css";
 import { fetchPreviewPoems } from "../../Services/get";
 import { useEffect, useState } from "react";
 
-const Home = () => {
-
-  const [data,setData] = useState([])
-
-  useEffect(() => {
-    fetchPreviewPoems(setData)
-  },[])
-
+const Home = ({ data, refetch }) => {
   return (
     <div className="home-root">
-      {data !== undefined ? data.map((row) => (
-        <Cards
-          cardTittle={row.cardTittle}
-          key={row.id}
-          id={row.id}
-          idPoemLink={row.idLink}
-          refetch={
-()=> fetchPreviewPoems(setData)
-          }
-          cardText={row.cardText}
-          likedPoem={row.like}
-        />
-      )):<></>}
+      {data !== undefined ? (
+        data.map((row) => (
+          <Cards
+            cardTittle={row.cardTittle}
+            key={row.id}
+            id={row.id}
+            idPoemLink={row.idLink}
+            refetch={() => refetch()}
+            cardText={row.cardText}
+            likedPoem={row.like}
+          />
+        ))
+      ) : (
+        <></>
+      )}
     </div>
   );
 };

@@ -1,33 +1,17 @@
 import { faHeart, faHeartCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import "./index.css";
 import { fetchPreviewPoems } from "../../Services/get";
 
-const PoemPage = () => {
-  const [liked, setliked] = useState(false);
+const PoemPage = ({ data, refetch }) => {
   const poemId = getId();
-  const poems = fetchPreviewPoems();
-  const poem = getPoem(poemId)[0];
-
-  console.log(poem, "poema");
-
-  function iconChecker() {
-    if (liked) {
-      return faHeartCircleCheck;
-    } else {
-      return faHeart;
-    }
-  }
-
-  function like() {
-    setliked(!liked);
-  }
+  const dataPoem = getPoem(poemId);
+  const poem = dataPoem;
 
   function getPoem(id) {
-    let poem = poems.filter((poem) => poem.idLink === id);
-
+    let poem = data.find((poem) => poem.idLink === id);
     return poem;
   }
 
@@ -41,17 +25,16 @@ const PoemPage = () => {
   return (
     <div className="divParent">
       <div className="poemPageContainer">
-        <div className="pageTitle">
-          <h2>{poem.cardTittle}</h2>
-          {/* <>
-            <Button variant="outline-primary" onClick={() => like()}>
-              <FontAwesomeIcon icon={iconChecker()} />
-            </Button>
-          </> */}
-        </div>
-        <div className="pagePoem">
-          <p className="poemText">{poem.cardText}</p>
-        </div>
+        {poem && (
+          <>
+            <div className="pageTitle">
+              <h2>{poem.cardTittle}</h2>
+            </div>
+            <div className="pagePoem">
+              <p className="poemText">{poem.cardText}</p>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
