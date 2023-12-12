@@ -1,0 +1,18 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: rgba(148, 148, 148, 0.6);
+  border-radius: 1%;
+  width: 80%;
+  height: 90%;
+  margin-top: 5rem;
+}
+
+.form-component {
+  margin: 5px;
+}
+
+.form-html {
+  background-image: url("./wood.jpg");
+}
